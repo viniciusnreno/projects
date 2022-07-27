@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        :root { font-size: 16px; }
+    	button {width: 50px; height: 50px; font-size: 15px !important ;}
+        h1{font-size: 5rem;}
+        h2{font-size: 4rem;}
+        h3{font-size: 3rem;}
+        h4{font-size: 2rem;}
+        h5{font-size: 1rem;}
+		</style>
+</head>
+<body>
+	<a onclick="altera()" class="btn" id="btn">+</a>
+    <a onclick="altera2()" class="btn" id="btn2">-</a>
+    <h1>Teste</h1> 
+    <h2>Teste</h2> 
+    <h3>Teste</h3> 
+    <h4>Teste</h4> 
+    <h5>Teste</h5> 
+
+    <script>
+		var num = 10;
+		function altera() {
+			if(num<50){
+				num = num + 10;
+				$(':root').css('font-size',num);
+			}
+		}
+
+		function altera2() {
+			num = num - 10;
+			if(num<50 && num>0){
+				$(':root').css('font-size',num);
+			}
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
