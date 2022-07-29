@@ -22,29 +22,28 @@ int binario(int vet[], int n, int x){
         return pos;
     }else{
         return 0;
-    }
-
-    
+    } 
 }
 
 
 int main(){
-    int n, x, pos;  
-    cin>>n;
-    int vet[n];
+    int x, pos, i=0;  
+    int vet[1000];
 
-    for(int i=0; i<n; i++){
+    cin>>vet[i];
+    while(vet[i] != -1){
+        i++;
         cin>>vet[i];
     }
     
     cin>>x;
     
-    pos = binario(vet,n,x);
+    pos = binario(vet,i,x);
     
     if(pos == 0){
-        cout<<"Nao encontrado"<<endl;
+        cout<<x<<" nao encontrado"<<endl;
     }else{
-        cout<<"Posicao"<<pos<<endl;
+        cout<<x<<" encontrado na posicao"<<pos<<endl;
     } 
     return 0;
 }
